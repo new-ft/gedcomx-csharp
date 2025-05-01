@@ -71,7 +71,7 @@ namespace Gx.Rs.Api.Options
             if (this.replace)
             {
                 request.Parameters.RemoveAll(x => x.Type == ParameterType.HttpHeader);
-                request.Parameters.AddRange(value.Select(x => new Parameter() { Type = ParameterType.HttpHeader, Name = this.name, Value = x }));
+                request.Parameters.AddRange(value.Select(x => new Parameter(this.name, x, ParameterType.HttpHeader)));
             }
             else
             {

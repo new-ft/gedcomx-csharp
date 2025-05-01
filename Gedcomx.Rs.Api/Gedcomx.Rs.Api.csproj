@@ -6,15 +6,13 @@
     <Product>GEDCOM X FamilySearch API</Product>
     <RootNamespace>Gx.Rs.Api</RootNamespace>
     <AssemblyName>Gedcomx.API.SDK</AssemblyName>
-    <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Flurl" Version="3.0.7" />
+    <PackageReference Include="Flurl" Version="4.0.0" />
     <PackageReference Include="json-ld.net" Version="1.0.7" />
-    <PackageReference Include="log4net" Version="2.0.15" />
-    <PackageReference Include="RestSharp" Version="104.5.0" />
-    <PackageReference Include="Tavis.Link" Version="2.5.0" />
+    <PackageReference Include="RestSharp" Version="106.15.0" />
+    <PackageReference Include="log4net" Version="3.0.4" />
   </ItemGroup>
 
   <ItemGroup>

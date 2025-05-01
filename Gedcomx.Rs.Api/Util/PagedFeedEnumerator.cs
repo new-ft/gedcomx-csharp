@@ -409,7 +409,7 @@ namespace Gx.Rs.Api.Util
             /// </returns>
             public IRestRequest Provide(IFilterableRestClient client, string uri)
             {
-                client.BaseUrl = new Uri(uri).GetBaseUrl();
+                client.BaseUrl = new Uri(uri);
                 return new RedirectableRestRequest(uri);
             }
         }

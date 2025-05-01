@@ -6,7 +6,6 @@
     <Product>GEDCOM X FamilySearch Utilities</Product>
     <RootNamespace>Gx.Util</RootNamespace>
     <AssemblyName>Gedcomx.Util</AssemblyName>
-    <TargetFramework>net48</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 

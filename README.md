@@ -86,3 +86,9 @@ nuget restore
 msbuild
 ```
 
+# Tavis Dependencies
+Copy some parts of the code from Tavis.UriTemplates and Tavis.Link into these repositories.
+https://github.com/tavis-software/Tavis.UriTemplates
+https://github.com/tavis-software/Tavis.Link
+To remove dependency on Tavis.UriTemplates and Tavis.Link which are use dot net Framework 4.8
+

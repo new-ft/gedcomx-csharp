@@ -16,7 +16,6 @@ using Gx.Types;
 
 using RestSharp;
 using RestSharp.Extensions;
-
 using Tavis.UriTemplates;
 
 namespace Gx.Rs.Api
@@ -297,8 +296,8 @@ namespace Gx.Rs.Api
                 return null;
             }
             var template = link.Template;
-
-            var uri = new UriTemplate(template).AddParameter("q", query).Resolve();
+            
+            var uri = new  UriTemplate(template).AddParameter("q", query).Resolve();
             var request = CreateAuthenticatedFeedRequest().Build(uri, Method.GET);
             return stateFactory.NewPersonSearchResultsState(request, Invoke(request, options), Client, CurrentAccessToken);
         }

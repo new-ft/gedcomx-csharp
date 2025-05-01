@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using RestSharp;
 
@@ -55,7 +56,7 @@ namespace Gx.Rs.Api.Util
         /// <returns></returns>
         public IRestResponse Handle(IRestRequest request)
         {
-            string originalBaseUrl = null;
+            Uri originalBaseUrl = null;
             IRestResponse result = null;
 
             foreach (var filter in filters)
@@ -66,10 +67,10 @@ namespace Gx.Rs.Api.Util
             // Prevent parallel execution issues (per instance) since this is a destructive property pattern
             lock (_lock)
             {
-                if (request is RedirectableRestRequest redirectable && redirectable.BaseUrl != BaseUrl && !string.IsNullOrEmpty(redirectable.BaseUrl))
+                if (request is RedirectableRestRequest redirectable && redirectable.BaseUrl != BaseUrl?.ToString() && !string.IsNullOrEmpty(redirectable.BaseUrl))
                 {
                     originalBaseUrl = BaseUrl;
-                    BaseUrl = redirectable.BaseUrl;
+                    BaseUrl = new Uri(redirectable.BaseUrl);
                 }
 
                 result = Execute(request);

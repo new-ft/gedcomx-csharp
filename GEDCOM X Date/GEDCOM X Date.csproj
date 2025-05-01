@@ -6,7 +6,6 @@
     <Product>GEDCOM X Date</Product>
     <RootNamespace>Gedcomx.Date</RootNamespace>
     <AssemblyName>Gedcomx.Date</AssemblyName>
-    <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
 </Project>

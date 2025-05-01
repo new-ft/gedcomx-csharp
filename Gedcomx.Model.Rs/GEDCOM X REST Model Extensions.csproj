@@ -6,7 +6,6 @@
     <Product>GEDCOM X REST Model Extensions</Product>
     <RootNamespace>Gx.Rs</RootNamespace>
     <AssemblyName>Gedcomx.Model.Rs</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

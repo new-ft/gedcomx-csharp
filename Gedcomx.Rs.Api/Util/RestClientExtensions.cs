@@ -38,7 +38,7 @@ namespace Gx.Rs.Api.Util
         /// </remarks>
         public static IRestRequest Accept(this IRestRequest @this, object value)
         {
-            var accept = new Parameter() { Name = "Accept", Type = ParameterType.HttpHeader, Value = value };
+            var accept = new Parameter("Accept", value, ParameterType.HttpHeader);
             return @this.SetParameter(accept);
         }
 
@@ -53,7 +53,7 @@ namespace Gx.Rs.Api.Util
         /// </remarks>
         public static IRestRequest ContentType(this IRestRequest @this, object value)
         {
-            var contentType = new Parameter() { Name = "Content-Type", Type = ParameterType.HttpHeader, Value = value };
+            var contentType = new Parameter("Content-Type", value, ParameterType.HttpHeader);
             return @this.SetParameter(contentType);
         }
 
@@ -141,7 +141,7 @@ namespace Gx.Rs.Api.Util
                         value = XmlSerializer.Serialize(entity);
                     }
 
-                    @this.AddParameter(new Parameter() { Name = formatHeader.Value.ToString(), Type = ParameterType.RequestBody, Value = value });
+                    @this.AddParameter(new Parameter(formatHeader.Value.ToString(), value, ParameterType.RequestBody));
                 }
                 else
                 {
@@ -199,7 +199,7 @@ namespace Gx.Rs.Api.Util
 
             if (@this != null)
             {
-                result = @this.toAsyncResponse<T>();
+                result = @this.ToAsyncResponse<T>();
                 var format = @this.GetDataFormat();
 
                 if (@this.Content != null)
@@ -296,7 +296,7 @@ namespace Gx.Rs.Api.Util
         /// </remarks>
         public static IRestRequest AcceptLanguage(this IRestRequest @this, string value)
         {
-            var accept = new Parameter() { Name = "Accept-Language", Type = ParameterType.HttpHeader, Value = value };
+            var accept = new Parameter("Accept-Language", value, ParameterType.HttpHeader);
             return @this.SetParameter(accept);
         }
 

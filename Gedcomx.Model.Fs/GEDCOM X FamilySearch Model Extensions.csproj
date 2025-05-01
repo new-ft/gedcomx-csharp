@@ -6,11 +6,11 @@
     <Product>GEDCOM X FamilySearch Model Extensions</Product>
     <RootNamespace>Gx.Fs</RootNamespace>
     <AssemblyName>Gedcomx.Model.Fs</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Resources.Extensions" Version="9.0.4" />
   </ItemGroup>
 
   <ItemGroup>

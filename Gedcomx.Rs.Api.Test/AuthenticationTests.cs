@@ -120,7 +120,7 @@ namespace Gedcomx.Rs.Api.Test
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             //var cq = new CQ(response.Content);
             //Assert.AreEqual(1, cq.Select("p#error").Length);
-            Assert.True(response.Content.Contains("Error")); // An error should occur.
+            Assert.That(response.Content.Contains("Error"), Is.EqualTo(true)); // An error should occur.
         }
 
         [Test, Category("AccountNeeded")]

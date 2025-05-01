@@ -6,7 +6,6 @@
     <Product>GEDCOM X Support</Product>
     <RootNamespace>Gedcomx.Support</RootNamespace>
     <AssemblyName>Gedcomx.Support</AssemblyName>
-    <TargetFramework>net48</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
