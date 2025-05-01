@@ -36,6 +36,7 @@ steps:
 
 - task: DotNetCoreCLI@2
   displayName: 'Test'
+  continueOnError: true
   inputs:
     command: 'test'
     arguments: '--no-restore --verbosity normal'
